@@ -1,7 +1,4 @@
-function getShareLinkContainer(node){
-if (node===null) {
-    return node;
-}
+function getShareLinkContainer(){
 
 let shareLinkContainer=document.createElement('div');
 shareLinkContainer.classList.add('share-link-container')
@@ -15,18 +12,19 @@ shareText.innerText="SHARE"
 let shareLinkGroup=document.createElement('div');
 shareLinkGroup.classList.add('share-link-group')
 
-const itemImageSrcs=[
+const shareLinkImgSrcs=[
     './images/icon-facebook.svg',
     './images/icon-twitter.svg',
     './images/icon-pinterest.svg',
 ];
 
-for(let src of itemImageSrcs){
+for(let src of shareLinkImgSrcs){
     let a=document.createElement('a');
-    let img=document.createElement('img');
     a.href="#"
-    a.style="display: flex"
+
+    let img=document.createElement('img');
     img.src=src
+
     a.appendChild(img)
     shareLinkGroup.append(a);
 }
@@ -34,7 +32,7 @@ for(let src of itemImageSrcs){
 shareLinkContainer.appendChild(shareText)
 shareLinkContainer.appendChild(shareLinkGroup)
 
-node.append(shareLinkContainer)
+return shareLinkContainer
 }
 
 function removeElementByClassName(node,className){
@@ -61,10 +59,17 @@ sharedbutton.addEventListener('click',(event)=>{
     const sharedIcon=document.getElementById('sharedIcon')
     if(event.currentTarget.classList.contains('active')){
         sharedIcon.src="./images/icon-white-share.svg"
-        getShareLinkContainer(event.currentTarget)
+        event.currentTarget.append(getShareLinkContainer(event.currentTarget))
     }
     else{
         sharedIcon.src="./images/icon-share.svg"
         removeElementByClassName(event.currentTarget,'share-link-container')
     }
+})
+
+sharedbutton.addEventListener('blur',(event)=>{
+    event.currentTarget.classList.remove('active')
+    const sharedIcon=document.getElementById('sharedIcon')
+    sharedIcon.src="./images/icon-share.svg"
+    removeElementByClassName(event.currentTarget,'share-link-container')
 })
