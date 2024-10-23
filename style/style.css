@@ -7,6 +7,10 @@
     font-size: 13px;
 }
 
+h1,h2{
+    margin: 0;
+}
+
 button{
     border-width: 0px;
 }
@@ -51,7 +55,7 @@ main{
     border-radius: 10px 0px 0px 10px;
 }
 
-.content-container{
+.container{
     display: flex;
     padding:32px 40px 32px 40px;
 }
@@ -78,7 +82,7 @@ main{
     color: #6E8098;
 }
 
-.person{
+.author{
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -131,9 +135,10 @@ main{
     color: #48556a;
     line-height: 20px;
     letter-spacing: 0.12px;
+    display: block;
 }
 
-.time{
+time{
     font-weight: 500;
     color: #9DAEC2;
     line-height: 20px;
