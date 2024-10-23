@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+.very-dark-grayish-blue{
+    color: hsl(217, 19%, 35%);
+}
+
+.desaturated-dark-blue{
+    color: hsl(214, 17%, 51%);
+}
+
+.grayish-blue{
+    color: hsl(212, 23%, 69%)
+}
+
+.light-grayish-blue{
+    color: hsl(210, 46%, 95%)
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Manrope", sans-serif;
+    background-color: #ECF2F8;
+}
+
+main{
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: #979797 ;
+    width: 730px;
+    height: 280px;
+}
+
+.banner{
+    object-fit: cover;
+    height: 280px;
+    width: 285px;
+}
+
+.content-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 365px;
+    height: 216px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 20px;
+    color: #48556a;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+}
+
+.description{
+    font-weight: 500;
+    color: #48556a;
+    line-height: 20px;
+    letter-spacing: 0.12px;
+    color: #6E8098;
+}
+
+.person{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.avator{
+    display: flex;
+    column-gap: 16px;
+}
+
+.avator-img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 100%;
+}
+
+.share-container{
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    background-color: #ECF2F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.share-img{
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    background-color: #ECF2F8;
+    border-radius: 100%;
+}
+.name{
+    font-weight: bold;
+    color: #48556a;
+    line-height: 20px;
+    letter-spacing: 0.12px;
+}
+
+.time{
+    font-weight: 500;
+    color: #9DAEC2;
+    line-height: 20px;
+    letter-spacing: 0.12px;
+}
