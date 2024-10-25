@@ -158,6 +158,10 @@ time{
     padding-right: 36px;
 }
 
+.share-link-container > div:first-child{
+    display: flex;
+}
+
 .share-link-container::before{
     width: 0px;
     height: 0px;
@@ -199,4 +203,64 @@ time{
 
 .background-color-white{
     background-color: var(--desaturated-dark-blue);
+}
+
+@media screen and (max-width:375px)  {
+    body{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    main{
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        border-radius: 10px ;
+        box-shadow:rgba(201, 213, 225, 0.5) 0px 40px 40px -10px ;
+    }
+
+    .banner{
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 200px;
+        border-radius: 10px 10px 0px 0px;
+    }   
+
+    .container{
+        display: flex;
+        padding:36px 32px 20px 32px;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .title{
+        margin-bottom: 12px;
+    }
+
+    .author{
+        margin-top: 32px;
+    }
+
+    .share-link-container{
+        position:static;
+        max-width:100%;
+        padding-left: 32px;
+        padding-right: 32px;
+        justify-content:space-between;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .share-link-container::before{
+        display: none;
+        content: "";
+    }
+
+    .share-container{
+        position: static;
+    }
 }
